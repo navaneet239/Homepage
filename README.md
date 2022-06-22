@@ -1,3 +1,4 @@
+<img align="right" width="100" height="100" src="Assets/Home.png">
 # The Official Homepage Portfolio website
 This is the official repository is kept and maintained for the portfolio website of @navaneet239.
 
