@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html> <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="logo icons/Home-Minecraft.png" />
+    <title>Home Page of Navaneet.J</title>
+
+    <!--Reference-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="http://fonts.cdnfonts.com/css/minecrafter-alt" rel="stylesheet">
+    <script src="sketch.js"></script>
+
+    <style>
+      body, html {
+       height: 100%;
+       margin: 0;
+       font-family: 'Minecrafter Alt', sans-serif;
+      color: rgb(175, 175, 175);
+       font-size:2vw;
+      }
+     
+     .bg {
+       background-color: #0000009d;
+       background-image: url("https://global-uploads.webflow.com/60f066754425cb9b4fc5881e/6258984ad9521c5c3f3b96f3_6250aad24a9fecb276dd9429_vrh5AVsjuQU2_Czb8othFXKQ2jTbokGSk6ltOpbEv2C7QjQmNGxJASRrsiejHx8m5kcgAKuuj3HQ89mDoUE7WMPOkPBsPLM-4A5BwfgE1Zg5ZZNYrmgtv04mEm9elwDbW5tkq5cH.png");
+       background-position: center;
+       background-size: cover;
+      }
+     
+     * { box-sizing: border-box;}
+     A {text-decoration: none; color: white;} 
+     img {image-resolution: 1080px;}
+          
+     h3 {
+       letter-spacing: 5px;
+       text-transform: uppercase;
+       font: 4vw , 'Minecrafter Alt', sans-serif;
+       color: rgb(70, 31, 0);
+      }
+       
+      /* width */
+      ::-webkit-scrollbar {
+        width: 7.5px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        border-radius: 0px;
+        background: #000;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+
+        background: url("https://cdn.hipwallpaper.com/i/67/11/QYtOLT.jpg"); 
+        border-radius: 0px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+          background: url("https://www.wallpapersun.com/wp-content/uploads/2021/12/Nether-Portal-Wallpapersun-3.png");
+      }
+     
+     .button {
+       position: relative;
+       background: url("https://preview.redd.it/ttunb4jgj4h51.jpg?width=640&crop=smart&auto=webp&s=d23eeb153a8d086ecdf111402c9ccd6fc4724ac2");
+       background-size: cover;
+       color:rgb(221, 240, 255);
+       order: none;
+       font-family: 'Minecrafter Alt';
+       font-size: 18px;
+       padding: 12px 24px;
+       cursor: pointer;
+       border: none;
+       border-radius: 5px;
+       text-align: center;
+       transition: 0.5s;
+       padding: 20px;
+       text-decoration: none;
+       overflow: hidden;
+       background-color: #000;
+       box-shadow: 0px 3px 4px rgb(39, 39, 39);
+      }
+     
+     .button:hover{
+       font-size: 19px;
+       box-shadow: 0px 5px 10px rgb(0, 0, 0);
+     }
+     
+     .bgimg-main, .bgimg-2, .bgimg-3, .bgimg-4 {
+       position: relative;
+       background-attachment: fixed;
+       background-repeat: no-repeat;
+       background-size: cover;
+       width: 100%;
+     }
+     
+     .bgimg-main {
+       background-image: url("https://i.pinimg.com/originals/9c/f5/b6/9cf5b64d6cd2963ef96eabb4b2c1cbe6.jpg");
+       background-size: cover;
+       min-height: 200px;
+       border-radius: 7.5px 7.5px 0 0;}
+         
+      .bgimg-2 {
+        background-image: url("https://www.teahub.io/photos/full/103-1036340_minecraft-art-digital-art-abstract-blurred-simple-.jpg");
+        min-height: 400px;}
+         
+         .bgimg-3 {
+           background-image: url("https://free4kwallpapers.com/uploads/originals/2016/06/26/world-map-abstract-4k-wallpaper.jpg");
+           min-height: 400px;}
+         
+         .bgimg-4 {
+           background-image: url("https://c0.wallpaperflare.com/preview/952/750/566/quotes-frame-go-further-space.jpg");
+           min-height: 400px;
+           border-radius: 0 0 15px 15px ;}
+     
+         .caption {
+           position: absolute;
+           left: 0;
+           top: 50%;
+           width: 100%;
+           text-align: center;
+           color: #000;
+         }
+         
+         .caption span.border {
+           background-color: #000000; /* Fallback color */
+           background: url("https://static.planetminecraft.com/files/image/minecraft/texture-pack/2020/146/13319085_l.webp"); /* Black w/opacity/see-through */
+           background-size: cover;
+           color: rgb(255, 255, 255); 
+           border: none;
+           border-radius: 5px;
+           position: absolute;
+           top: 25%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           z-index: 2;
+           width: 65%;
+           padding: 20px;
+           text-align: center;
+           font-size: 15px;
+           font-size: 2vw;
+           box-shadow: 0px 5px 10px rgb(0, 0, 0);
+         }
+         
+         .infoMain {
+           position: absolute;
+           left: 17.5%;
+           top: 25%;
+           width: 65%;
+           height: fit-content;
+           border-radius: 7.5px;
+           background: url("https://i.gifer.com/origin/8c/8ccffe6035cfca23be13e8a77833cfb0.gif");
+           background-position: center;
+           background-size:cover;
+           overflow-x: hidden;
+           overflow-y: hidden; 
+           padding-top: 10px;
+           padding-right: 10px;
+           padding-left: 10px;
+           text-align: center;
+           padding: 10px 15px 15px 12.5px; 
+           color: rgb(0, 0, 0); 
+           box-shadow: 2.5px 3px 12px rgb(0, 0, 0) ;
+         }
+
+         .infoMain a {
+           padding: 6px 8px 20px 16px;
+           text-decoration: none;
+           font-size: 15px;
+           color: #ffffff;
+           display: block;
+           text-align: center;
+           font-size:1.5vw;
+           border: 1px #000;
+          }
+
+        .mySidenav {
+          display:block;
+          height:max-content;
+          width:auto;
+          position: fixed;
+          z-index: 200;
+          bottom: 5%;
+          top: -175px;
+          right: 100px; 
+          overflow-y:hidden;
+          overflow-x:hidden;
+          padding-top: 7.5px;
+          padding-bottom: 15px;
+          padding-right: 20px;
+          padding-left: 20px;
+          transform: translate(5%);
+          transition: 0.75s ;
+          background: url("https://wallpaperaccess.com/full/2984631.png");
+          background-size: cover;
+          box-shadow: 0px 4px 55px #000000;
+          border:none;
+          border-top: none;
+          border-radius:  0px  0px 5px 5px;
+        }
+
+      .mySidenav:hover {top: 0px;}
+
+      .mySidenav a {
+        padding: 6px 8px 2px 10px;
+        text-decoration: none;
+        font-size: 12px;
+        color: #ffffff;
+        display: block;
+        transition: font-size 0.5s, width 2s, height 2s, transform 2s, filter 1s;
+        filter: drop-shadow(0px 3px 7px rgb(0, 0, 0));
+      }
+      
+      .mySidenav a:hover {
+        filter: drop-shadow(0px 6px 15px rgb(0, 0, 0));
+        transform: scale(1.2, 1.2);
+      }
+
+           @media only screen and (max-device-width: 1024px) {
+               .bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+                 background-attachment: scroll;
+               }}
+             
+             .tabcontent {
+               color: black;
+               display: none;    
+               padding: 100px 20px;
+               height: 120%;
+             }
+             
+             #1 {background-color: #ffffff;}
+             #2 {background-color: red}
+             #3 {background-color: red}
+             #4 {background-color: red}
+             #5 {background-color: red}
+             #6 {background-color: red}
+           
+             .content {
+               padding: 20px;
+               text-align: center;
+             }
+             
+             .sticky + .content {
+               padding-top: 102px;
+             }
+             
+             #text{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               color: white;
+               transform: translate(-50%,-50%);
+               -ms-transform: translate(-50%,-50%);
+             }
+             
+             .st {
+               text-align: center; 
+               font-size: 4vw; 
+               background: url("https://static.planetminecraft.com/files/image/minecraft/texture-pack/2020/146/13319085_l.webp");
+               border: none;
+               border-radius: 5px;
+               width: fit-content;
+               height: fit-content;
+               padding: 6px 48px 20px 48px;
+               color: rgb(157, 154, 167); 
+               box-shadow: 0px 5px 10px rgb(0, 0, 0);
+             }
+     
+             .site-nav {
+               display:block;
+               height:max-content;
+               width:auto;
+               position: fixed;
+               z-index: 200;
+               bottom: 5%;
+               right: -80px;
+               overflow-y:hidden;
+               overflow-x:hidden;
+               padding-top: 10px;
+               padding-bottom: 20px;
+               padding-right: 10px;
+               padding-left: 10px;
+               transform: translate(5%);
+               transition: 1.0s ;
+               background: url("https://wallpaperaccess.com/full/2984631.png");
+               box-shadow: 5px 7.5px 15px rgb(0, 0, 0) ;
+                background-size: cover;
+               border: none;
+               border-right: none;
+               border-radius: 5px 0px 0px  5px;
+             }
+     
+             .site-nav:hover {right: 1px; box-shadow: 5px 10px 15px rgb(0, 0, 0) ;}
+     
+             .site-nav a {
+               padding: 6px 8px 2px 10px;
+               text-decoration: none;
+               font-size: 22px;
+               color: #818181;
+               display: block;
+               transition: font-size 0.5s, width 2s, height 2s, transform 2s, filter 1s;
+               filter: drop-shadow(0px 0px 2px rgb(0, 0, 0));
+             }
+             
+             .site-nav a:hover {
+               color: rgb(0, 102, 255);
+               filter: 1px 5px 3px rgb(0, 0, 0) ;
+             }
+
+             .topnav {
+               height:max-content;
+               width:auto;
+               position: fixed;
+               z-index: 200;
+               bottom: -1%;
+               left: -80px;
+               top: 25px;
+
+               overflow-y:hidden;
+               overflow-x:hidden;
+               padding-top: 7.5px;
+               padding-bottom: 7.5px;
+               padding-right: 7.5px;
+               padding-left: 7.5px;
+               transform: translate(5%, 3.5%);
+               transition: 0.5s ;
+               background: url("https://wallpaperaccess.com/full/2984631.png"); 
+               background-size: cover;
+               box-shadow: 5px 7.5px 15px #000000;
+               border: none;             
+               border-radius: 0px 5px 5px 0px;
+             }
+             .topnav:hover {left: -10px; padding-left: 7.5px;}
+             .topnav .site {display: none;}
+
+             .topnav a {
+               padding: 6px 8px 2px 10px;
+               text-decoration: none;
+               font-size: 19px;
+               color: #818181;
+               display: block;
+               transition: font-size 0.5s, width 2s, height 2s, transform 2s, filter 1s;
+               filter: drop-shadow(0px 0px 5px rgb(0, 0, 0));
+             }
+             
+             .topnav a:hover {
+               color: rgb(0, 102, 255);
+               transform: scale(1.1, 1.1);
+               filter: drop-shadow(3px 5px 10px rgb(0, 0, 0));
+             }
+
+             .topnav .icon {display: none;}
+
+             div.main {
+               margin-left: 5%;
+               margin-top: -5%;
+               padding: 1px 16px;
+             }
+           
+           #about {
+             bottom: 5px;
+             background-color: rgb(15, 18, 27);
+           }
+     
+           @media screen and (max-width: 650px) {
+
+              .bg {
+               background-image: url("https://th.bing.com/th/id/OIP.wxc2j31hmfJe2gvoGwLZ3QHaNK?pid=ImgDet&rs=1");
+               background-position: center;
+               background-size: cover;
+              }
+
+             .site-nav {display:none;}
+
+               .topnav a:not(:first-child) {display: none;}
+             
+               .topnav a.icon {
+                 float: right;
+                 display: block;
+                 padding-top: 10%;
+               }
+             
+               .topnav {
+                 overflow: hidden;
+                 background: url("https://wallpaperaccess.com/full/2984631.png"); 
+                background-size: cover;
+                box-shadow: 1px 1px 5px #2b2b2b;
+                border: none;             
+                border-radius: 7.5px;
+                 z-index: 199;
+                 width: 95%;
+                 height: auto;
+                 position:relative;
+                 top: 2%;
+                 left: 2.5%;
+                 float: left;
+                 transform: translate(0, 0);
+                 vertical-align: middle;
+                 transition:left 0s, 0.5s;
+               }
+               .topnav .site {display: block;}
+               .topnav:hover {left:  2.5%;}
+
+               .topnav a {
+                 float: left;
+                 display: block;
+                 color: #f2f2f2;
+                 text-align: center;
+                 padding: 14px 16px;
+                 text-decoration: none;
+                 font-size: 22.5px;
+               }
+             
+               .topnav a:hover{
+                 color: rgb(0, 102, 255);
+                 transform: scale(1.5, 1.5);}
+             
+               .topnav a.active {color: white;}
+               .tab{font-size: 10px;}
+             
+               .topnav + .tab {
+                 float: right;
+                 display: none;}
+             
+               div.main {margin-left: 0; margin-top: 1%; transform: translateY(75px);}
+             
+               .infoMain{top: 65%;}
+               
+               .mySidenav {display: none;}
+             }
+             
+             @media screen and (max-width: 650px) {
+               .topnav.responsive {position: relative;}
+               .topnav.responsive .icon {
+                 position: absolute;
+                 right: 0;
+                 top: 0;
+               }
+               .topnav.responsive a {
+                 float: none;
+                 display: block;
+                 text-align: center;
+               }}
+     
+             .collapsible {
+             background: url("https://i.pinimg.com/474x/45/e3/96/45e39667c0e37a401834a7989b0ad9bc.jpg");
+             background-size:cover;
+             background-position: top;
+             transition: 0.5s;
+             color: rgb(214, 199, 182);
+             cursor: pointer;
+             padding: 20px;
+             padding-top: 50px;
+             width: 100%;
+             height: 100%;
+             border: none;
+             border-radius: 5px;
+             border-bottom: none;
+             text-align: center;
+             font-size: 2vw;
+             font-family: 'Minecrafter Alt';
+           }
+           
+           .active, .collapsible:hover {
+             color:rgb(255, 255, 255);
+           }
+           
+           .active {border-radius: 5px 5px 0 0;}
+     
+           .collapsible:after {
+             content: '\02795';
+             color: white;
+             float: right;
+             margin-left: 5px;
+           }
+           
+           .active:after {content: "\2796";}
+           
+           .content {
+             padding: 15px 35px;
+             max-height: 0;
+             overflow: hidden;
+             font-size: 2vw;
+             transition: max-height 0.2s ease-out;
+             background: url("https://i.pinimg.com/474x/45/e3/96/45e39667c0e37a401834a7989b0ad9bc.jpg");
+             background-size: cover;
+             background-position: bottom;
+             border-radius: 0 0 5px 5px;
+           }
+
+           @media screen and (max-width: 600px) {
+             .collapsible {font-size: 5vw;}
+             .content {font-size: 4vw;}
+             h3 {font-size: 4vw;}
+             ol {font-size: 4vw;}
+             p{font-size: 3.7vw;}
+           }
+     
+           .header {
+             text-align: center;
+             padding: 32px;}
+     
+           .row {
+             display: -ms-flexbox; /* IE10 */
+             display: flex;
+             -ms-flex-wrap: wrap; /* IE10 */
+             flex-wrap: wrap;
+             padding: 0 4px;
+           }
+     
+           .column {
+             -ms-flex: 25%; /* IE10 */
+             flex: 25%;
+             max-width: 35%;
+             padding: 0 4px;
+           }
+     
+           .column img {
+             margin-top: 8px;
+             vertical-align: middle;
+             width: 100%;
+             border-radius: 25px;
+             box-shadow: 2px 4px 10px #000 ; 
+           }
+     
+           @media screen and (max-width: 800px) {
+             .column {
+               -ms-flex: 50%;
+               flex: 50%;
+               max-width: 50%;
+             }
+           }
+     
+           @media screen and (max-width: 600px) {
+             .column {
+               -ms-flex: 100%;
+               flex: 100%;
+               max-width: 100%;
+             }
+           }
+     
+           .container2 {
+             position: relative;
+             width: 100%;
+             max-width: 400px;
+           }
+           
+           .container2 img {
+             width: 100%;
+             height: auto;
+             transition: filter 1s;
+           }
+           
+           .container2 .btn {
+             position: absolute;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             -ms-transform: translate(-50%, -50%);
+             background: url("https://cdn.wallpapersafari.com/57/90/X1onEH.jpg");
+             background-size: cover;
+             color:rgb(255, 255, 255);
+             order: none;
+             font-size: 18px;
+             font-weight: lighter;
+             padding: 12px 24px;
+             border: none;
+             cursor: pointer;
+             border-radius: 5px;
+             text-align: center;
+             transition: 0.5s;
+             box-shadow: 0px 3px 4px rgb(0, 0, 0);
+           }
+           
+           .container2 .btn:hover {
+            font-size: 19px;
+            box-shadow: 0px 5px 10px rgb(0, 0, 0);
+           }
+       
+           .container2 img:hover {filter: blur(5px);}
+     
+           .container {
+             display: inline-block;
+             cursor: pointer;
+           }
+           
+           .bar1, .bar2, .bar3 {
+             width: 25px;
+             height: 5px; 
+             background-color: rgb(255, 252, 225);
+             margin: 6px 0;
+             transition: 0.4s;
+             border-radius: 5px;
+             box-shadow: none;
+           }
+           
+           .change .bar1 {
+             -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+             transform: rotate(-45deg) translate(-9px, 6px);}
+           
+           .change .bar2 {opacity: 0;}
+           
+           .change .bar3 {
+             -webkit-transform: rotate(45deg) translate(-8px, -8px);
+             transform: rotate(45deg) translate(-8px, -8px);}</style></head>
+
+  <body class="bg" bgcolor="black">
+    <!--Navigation-->
+    <div class="topnav" id="myTopnav" style="text-align: CENTER;"><CENTER>
+        <a href="#1st-page" class="default" style="text-align: CENTER; 
+        transform: rotate(0deg);  padding-right: 10px;
+        filter: drop-shadow(0px 3px 5px rgb(0, 0, 0));" onclick="openPage('1', this, 'rgb(255, 255, 255)'), topnav()"> <img class="flower-M_UI" src="logo icons/Home-Minecraft.png" alt="log" width="80"></a>
+
+        <a href="#home" style="padding-top: 30px;" onclick="openPage('2', this, 'rgb(255, 255, 255)'), topnav()"><img src="Assets/Home icon.png" alt="log" width="85" ></a>
+
+        <a href="#Profile" style="padding-top: 30px;"  onclick="openPage('3', this, 'red'), topnav()"><img src="Assets/profile icon.png" alt="log" width="85"></a>
+
+        <a href="#achievements" style="padding-top: 30px;" onclick="openPage('4', this, 'red'), topnav()"> <img src="Assets/Award icon.png" alt="log" width="85"></a>
+
+        <a href="#Art" style="padding-top: 20px;" onclick="openPage('6', this, 'red'), topnav()"> <img src="Assets/pencil-icon.png" alt="log" width="85"></a>
+        
+        <a href="#Sites" class="site" style="padding-top: 20px;" onclick="openPage('5', this, 'red'), topnav()"><img src="Assets/sites icon.png" alt="log" width="85"></a>  </CENTER> 
+
+      <a href="javascript:void(0);" class="icon"  style=" transform: rotate(0deg);" onclick="topnav()">
+        <div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+
+        <script>
+          function myFunction(x) {
+            x.classList.toggle("change");
+          }
+        </script>
+      </a></div>
+
+    <div class="site-nav" id="myTopnav" style="text-align: CENTER;">
+    <a href="#Sites" style="padding-top: 20px;" onclick="openPage('5', this, 'red'), topnav()">
+      <img src="Assets/sites icon.png" alt="log" width="85"></a>
+    </div>
+    <div class="mySidenav"> <CENTER>
+      <a href="https://github.com/navaneet239/HomePageOf_Navaneet.J/blob/main/BE-info.md" id="home" style="text-align: center;"><font style="font-size: 16px;">Click me to know about B.E.</font></a>
+      <hr>
+      <div style="display: inline-block; font-size: 13px; color: rgb(255, 255, 255); font-weight: lighter;"><a href="index.html"><img src="logo icons/Home.ico" alt="log" width="80" ></a>Fluent (default)</div>
+      <div style="display: inline-block; font-size: 13px; color: rgb(255, 255, 255); font-weight: lighter;"><a href="index-Material.html"><img src="logo icons/Home-Material.png" alt="log" width="85" ></a>Material YOU</div>
+      <div style="display: inline-block; font-size: 13px; color: rgb(255, 255, 255); font-weight: lighter;"><a href="index-Minecraft.html"><img src="logo icons/Home-Minecraft.png" alt="log" width="85" ></a>Minecraft UI</div>
+      <div style="color:#ffffff; padding-top: 10px;">Hover Me for Themes!</div></CENTER>
+    </div>
+
+    <style> 
+      .hide {display: none;}
+      .myHDIV:hover + .hide {display: block;}
+    </style>
+    
+    <div class="main">
+
+      <!--Welcome page-->
+      <div id="1" class="tabcontent" style="display: block;"> <CENTER>
+          <div class="infoMain">
+            <span class="border" style="border-radius: 20px;">  <br>
+              <img src="logo icons/Home-Minecraft.png"style="padding-top: -50px;" width="120px">
+              <p style="margin-top: 2.5px; color:#ffffff; "><font size= 3vw; >The official portfolio website of Navaneet.J</font></p> 
+              <center>
+                <a href="#Home" onclick="openPage('2', this, 'red')"> 
+                  <button class="button">
+                    start the journey! 
+                  </button></a> </center>  
+            </span>
+          </div>
+        </CENTER>
+      </div>
+
+      <style>
+        .endStone  {background: url("https://i.pinimg.com/474x/92/a5/45/92a5450b2a48e64c2d7a1b43a43d5e75--minecraft-texture.jpg");
+      }
+      </style>
+
+      <!--Home/Introduction page-->
+      <div id="2" class="tabcontent">
+        <div class="bgimg-main">
+          <br><br><br><br><br><br><br><br><br><br><br><br>
+          <div class="caption">
+            <span class="border" style="backdrop-filter: blur(7.5px), brightness(75%);">
+              <p><font color="white" size= font-size:3.75vw;>Home page of Navaneet.J</font></p>    
+            </span>
+          </div>
+        </div>
+
+
+        <div class="endStone" style="color: rgb(0, 0, 0);
+        text-align:center; padding:50px 30px; text-align: center;">
+
+          <div ><h3 style="text-align:center;     
+            color:rgb(0, 0, 0); padding: 25px;
+            font-weight: lighter; font-size: 3vw; text-align: left"> About Me</div>
+          <div>
+
+          <p style="color: #000; font-size: 3.7; text-align: justify;"> I'm currently to at my schooling and yep! have couple of other talents on my other side. My main passion is Drawing and Painting. This talent of mine is my peak! Coding and editing is even in my list, although yet to cross some steps to be a professional! Even I'm an enthusiast for sports. So I'm a good athlete, won many medals since my young ages! even a half way through gymnast and much more...</p></div>
+            <center>
+              <a href="#Profile" onclick="openPage('3', this, 'red')"> <button class="button">detailed profile</button></a></center>      
+          </div>
+          
+        <div class="bgimg-2">
+          <div class="caption">
+            <span class="border" style="background-color:transparent;font-size:25px; color: black; font-size:2vw;">
+              <h3 style="text-align:center; color: rgb(255, 115, 0)">Art is my Hike!</h3>
+              <center>
+                <a href="#Arts" onclick="openPage('6', this, 'red')"> <button class="button">Check out</button></a></center>          
+            </span>
+          </div>
+        </div>
+
+        <div style="position:relative;">
+          <div style="color:rgb(0, 60, 255);
+          background-color: rgba(0, 0, 0, 0.562); backdrop-filter: blur(5px);
+          text-align:center; padding:50px 80px; text-align: justify;">
+            <CENTER>
+              <h3 style="text-align:center; color:#ff3737">My online game</h3>
+              <h2 style="text-align:center; font-size: 3.25vw;    
+              color:rgb(175, 0, 0);
+              padding: 25px;
+              width: max-content;">The alien runner</h2></CENTER>
+            <center>
+              <a href="https://navaneet239.github.io/AlienRunnerGame_HomePage_Original/"> <button class="button">Click here</button></a>
+            </center>  
+          </div>
+        </div>
+
+        <div class="bgimg-3">
+          <div class="caption">
+            <span class="border">Wanna explore here more</span>
+          </div>
+        </div>
+    
+        <div class="endStone" style="position:relative;">
+          <div style="color:#ddd; padding:50px 80px; text-align: justify;">
+            <h3 style="color:rgb(66, 66, 66);
+            font-weight: lighter; padding: 25px; width: max-content;">
+            probably...</h3>
+          </div>
+        </div>
+    
+        <div class="bgimg-4">
+          <div class="caption">
+            <span class="border">
+              <h1 style="font-size:3vw; font-weight: lighter;">Switch to the next tab!!</h1>
+              <div>
+                <a href="#Profile" onclick="openPage('3', this, 'red')"> <button class="button"> Next ▶</button></a>
+              </div>
+            </div>
+          </span>
+        </div>
+      </div>
+
+      <!--Basic Details page-->
+      <div id="3" class="tabcontent">
+        <div class="bgimg-main"> <br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div class="caption">
+          <span class="border">
+            <p><font color="white" >Personal Information</font></p>  
+          </span>
+        </div>
+        </div>
+        <div  class="endStone" style="color: rgb(59, 0, 0);
+         text-align:left; padding:50px 60px; font-weight: lighter;">
+        <CENTER>
+        <h3 style="text-align:center;     
+        padding: 25px; width: max-content;">
+        Basic info</h3></CENTER>
+          <ol>
+            <li><strong>My Name: </strong>Navaneet.J</li>
+            <li><strong>Mom's name: </strong>Padma.J</li>
+            <li><strong>Dad's name: </strong>Jaggannathan.K</li>
+            <li><strong>Country: </strong>India</li>
+            <li><strong>Mother toungue: </strong>Tamil</li>
+          </ol>
+        </div>
+        <div style="position:relative;">
+          <div style="color:rgb(255, 255, 255);
+          background-color: rgba(0, 0, 0, 0.562); backdrop-filter: blur(5px);
+          text-align:center;padding:50px 60px; border-radius: 0 0 5px 5px; text-align: justify;">
+            <h3 style="text-align:center; color:rgb(0, 102, 255); font-weight: lighter;">Highlighting hobbies</h3>
+          <button class="collapsible">Arts</button>
+          <div class="content"> <p>
+              Graphite shading
+              <br>
+              Charcoal shading
+              <br>
+              Colour pencil shading
+              <br>
+              Watercolours
+              <br>
+              Acrilic
+              <br>
+              Craft work
+            </p>
+          </div> <br>
+            
+        <button class="collapsible">Sports</button>
+        <div class="content"> <p>
+            Athletics
+            <br>
+            Gymnastics
+            <br>
+            Cricket
+            <br>
+            Badminton
+            <br>
+            Football
+            <br>
+          </p>
+        </div> <br>
+
+        <button class="collapsible">Extras</button>
+        <div class="content"> <p>
+            Coding
+            <br>
+            Gaming
+            <br>
+            Editing
+            <br>
+            Story/poem writng
+            <br>
+          </p>
+        </div>
+
+        <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script> <br>
+        <CENTER>
+          <div >
+            <h3 style="color:rgb(0, 102, 255);">Awards Section</h3>
+            <a href="#Awards" onclick="openPage('4', this, 'red')"> <button class="button"> Next tab ▶</button></a>
+          </div></CENTER>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .nether-portal {
+        background: url("https://www.wallpapersun.com/wp-content/uploads/2021/12/Nether-Portal-Wallpapersun-3.png");
+      }
+    </style>
+
+      <!--Achivements page-->
+      <div id="4" class="tabcontent">
+        <div style="position:relative;">
+          <div class="nether-portal" style="color:rgb(255, 255, 255);
+          box-shadow: 2px 4px 10px rgb(0, 0, 0);  border: none;
+          text-align:center; padding:50px 80px;
+          text-align: justify;  border-radius: 5px;">
+            <CENTER>
+            <h2 style="text-align: center; font-size: 3.75vw;
+            color: rgb(255, 255, 255); font-weight: lighter;
+            border: none; 
+            width:max-content; padding: 20px;
+            text-align: center;"> 
+            <i class="fa fa-fw fa-trophy"></i> My Achivements</h2></CENTER>
+            
+            <div class="row" > 
+              <div class="column">
+                <img src="Assets/2017.jpg" style="width:100%">
+                <img src="Assets/2.jpg" style="width:100%">
+                <img src="Assets/3.png" style="width:100%">
+                <img src="Assets/4.png" style="width:100%">
+                <img src="Assets/5.png" style="width:100%">
+              </div>
+              <div class="column">
+                <img src="Assets/1.jpg" style="width:100%">
+                <img src="Assets/2017_2.jpg" style="width:100%">
+                <img src="Assets/2017_3.jpg" style="width:100%">
+                <img src="Assets/2018.jpg" style="width:100%">
+                <img src="Assets/2019.jpg" style="width:100%">
+                <img src="Assets/6.png" style="width:100%">
+              </div>  
+              <div class="column">
+                <img src="Assets/IMG-20211224-WA0025.jpg" style="width:100%">
+                <img src="Assets/IMG-20211224-WA0027.jpg" style="width:100%">
+                <img src="Assets/IMG-20211224-WA0032.jpg" style="width:100%">
+                <img src="Assets/7.jpg" style="width:100%">
+                <img src="Assets/8.jpg" style="width:100%">
+              </div>
+            </div> <br>
+            <CENTER>
+              <div >
+                <h3 style="color: #ffffff; font-weight: lighter;">Art Section</h3>
+                <a href="#Art" onclick="openPage('6', this, 'red')"> <button class="button"> Next tab ▶</button></a>
+              </div></CENTER>
+          </div>
+        </div>
+      </div>
+
+      <!--Social links page-->
+      <div id="5" class="tabcontent"> <CENTER> <br><br>
+
+            <div class="st">
+              <p><i class="fa fa-fw fa-globe"></i> Connected Social Platforms</p>
+            </div> <br><br>
+
+            <div class="nether-portal" style="color:rgb(255, 255, 255);
+            box-shadow: 2px 4px 10px rgb(0, 0, 0);  width: fit-content; border: none;
+            text-align:center; padding:50px 80px;border-radius: 5px;            
+            padding-top: 30px; padding-bottom:30px;
+            padding-left: 40px; padding-right: 40px;">
+
+            <div class="container2">
+              <img src="https://github.githubassets.com/pinned-octocat.svg" alt="Github" style="width:87.5%">
+              <a href="https://github.com/navaneet239"><button class="btn">Github profile</button></a>
+            </div> <br><br>
+
+            <div class="container2">
+              <img src="Assets/faceBoock.png" alt="Facebook" style="width:87.5%">
+              <a href="https://www.facebook.com/navaneet.jaggannathan/"><button class="btn">Facebook profile</button></a>
+            </div> <br><br>
+
+            <div class="container2">
+              <img src="Assets/Instagram.png" alt="Instagram" style="width:87.5%">
+              <a href="https://www.instagram.com/nav_pj2309/"><button class="btn">Instagram profile</button></a>
+            </div> <br><br>
+
+            <div class="container2">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest" style="width:87.5%">
+              <a href="https://in.pinterest.com/NavPadJag/"><button class="btn">Pinterest profile</button></a>
+            </div> <br><br>
+
+            <div class="container2">
+              <img src="Spotify_Logo_RGB_Green-256.webp" alt="Spotify" style="width:87.5%">
+              <a href="https://open.spotify.com/user/r2n5niqigeto2gu5uisu0hh3p?si=8-2tD3N9Rui75en6evobcQ&nd=1"><button class="btn">Spotify profile</button></a>
+            </div> <br><br>
+          </div> </CENTER>
+      </div>
+
+      <!--Art page-->
+      <div id="6" class="tabcontent">
+        <div style="position:relative;">
+          <div class="nether-portal" style="color:rgb(255, 255, 255);
+          box-shadow: 2px 4px 10px rgb(0, 0, 0);  border: none;
+          text-align:center; padding:50px 80px;
+          text-align: justify;  border-radius: 5px;"> <CENTER>
+            <h2 style="text-align: center; font-size: 3.75vw;
+            color: rgb(255, 255, 255);  font-weight: lighter;
+            border: none; border-radius: 5px;
+            width:max-content; padding: 20px;">
+            <i class="fa fa-fw fa-trophy"></i> My Arts</h2></CENTER>
+
+            <div class="row" > 
+              <div class="column">
+                <img src="Assets/art1.png" style="width:100%">
+                <img src="Assets/art2.jpg" style="width:100%">
+                <img src="Assets/art3.jpg" style="width:100%">
+                <img src="Assets/art4.jpg" style="width:100%">
+                <img src="Assets/art10.png" style="width:100%">
+              </div>
+              <div class="column">
+                <img src="Assets/art5.jpg" style="width:100%">
+                <img src="Assets/art6.jpg" style="width:100%">
+                <img src="Assets/art7.jpg" style="width:100%">
+                <img src="Assets/art8.jpg" style="width:100%">
+                <img src="Assets/art15.jpg" style="width:100%">
+              </div>  
+              <div class="column">
+                <img src="Assets/art11.jpg" style="width:100%">
+                <img src="Assets/art12.jpg" style="width:100%">
+                <img src="Assets/art13.jpeg" style="width:100%">
+              </div>
+              <div class="column">
+                <img src="Assets/art16.jpg" style="width:100%">
+                <img src="Assets/art17.jpg" style="width:100%">
+                <img src="Assets/art18.jpg" style="width:100%">
+                <img src="Assets/art14.jpg" style="width:100%">
+                <img src="Assets/art9.jpg" style="width:100%">
+              </div>
+            </div><br>
+
+            <CENTER>
+              <div>
+                <h3 style="color: rgb(255, 255, 255); font-weight: lighter;">Social platform Section</h3
+                <a href="#Sites" onclick="openPage('5', this, 'red')"> <button class="button"> Next tab ▶</button></a>
+              </div></CENTER>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body> </html>
